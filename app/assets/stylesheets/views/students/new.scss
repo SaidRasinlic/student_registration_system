@@ -1,0 +1,72 @@
+form#new_user {
+  label {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  table tr th:nth-child(2) {
+    text-align: center;
+    width: auto;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+// .student-new {
+//   form#new_user {
+
+//       tbody label {
+//         background-color: red;
+//         position: absolute !important;
+//         width: 1px !important;
+//         height: 1px !important;
+//         padding: 0 !important;
+//         overflow: hidden !important;
+//         clip: rect(0, 0, 0, 0) !important;
+//         white-space: nowrap !important;
+//         border: 0 !important;
+//       }
+//   }
+// }
+// .student-new {
+//   &__form {
+//     background: #fff;
+//     height: auto;
+//     margin: 15px auto;
+
+//     .custom-form__field {
+//       width: 80%;
+//       margin: 0 auto;
+//     }
+
+//     input[type="file"] {
+//       width: 182px;
+//       min-width: 182px;
+//       cursor: pointer;
+//     }
+//   }
+//   &__title {
+//     margin-bottom: 25px;
+//     color: black;
+//   }
+
+//   &__details {
+//     display: flex;
+//     justify-content: space-between;
+//     font-size: 20px;
+//     padding: 20px;
+
+//     a {
+//       color: black;
+//       font-size: 29px;
+//     }
+//   }
+// }

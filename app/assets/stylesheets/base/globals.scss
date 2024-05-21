@@ -1,0 +1,144 @@
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Montserrat', sans-serif;
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    // background-image: -webkit-gradient(linear,
+    //     left bottom,
+    //     left top,
+    //     color-stop(0.44, rgb(210, 212, 216)),
+    //     color-stop(0.72, rgb(13, 51, 43)),
+    //     color-stop(0.86, rgb(103, 147, 127)));
+    background: linear-gradient(to bottom, #304352, #d7d2cc);
+    background: linear-gradient(to bottom, #8e9eab, #eef2f3);
+
+    &:hover {
+      background: linear-gradient(to bottom, #304352, #d7d2cc);
+
+      //   background-image: -webkit-gradient(linear,
+      //       left bottom,
+      //       left top,
+      //       color-stop(0.44, rgb(106, 99, 99)),
+      //       color-stop(0.72, rgb(113, 129, 146)),
+      //       color-stop(0.86, rgb(141, 126, 126)));
+    }
+  }
+
+  &.restricted {
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    user-select: none;
+    // backdrop-filter: blur(5px);
+
+    // & :not(.turbo-modal *) {
+    //   filter: blur(5px);
+    // }
+
+    // :not(.turbo-modal) {
+    // color: red;
+    // & :not(.turbo-modal *) {
+    //   color: red !important;
+    //   // overflow: hidden;
+    //   // filter: blur(5px);
+    // }
+  }
+}
+
+.overlay {
+  /* Initially hide the overlay */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  /* Adjust the overlay color and transparency */
+  z-index: 1000;
+
+  /* Set a high z-index to make sure it appears above other elements */
+
+  &.active {
+    display: block;
+    backdrop-filter: blur(6px);
+  }
+}
+
+// body *:not(.turbo-modal) {
+//   color: red;
+//   /* Add other styles as needed */
+// }
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+// body.restricted :not(.turbo-modal) {
+//   pointer-events: none;
+//   overflow: hidden;
+// }
+
+.turbo-modal {
+  pointer-events: auto;
+  overflow: auto;
+}
+
+input#import_file {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.error-message {
+  width: 100%;
+  color: hsl(350, 67%, 50%);
+  background-color: hsl(0, 85%, 96%);
+  padding: 8px;
+  border-radius: 0.375rem;
+}

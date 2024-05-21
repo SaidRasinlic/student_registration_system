@@ -1,0 +1,4 @@
+<%= form_tag import_export_admin_students_path, multipart: true, class: 'file-upload-form', data: { turbo_frame: '_top' } do %>
+  <%= file_field_tag :export_file, accept: '.csv' %>
+  <%= submit_tag 'Exportss', class: 'button' %>
+<% end %>

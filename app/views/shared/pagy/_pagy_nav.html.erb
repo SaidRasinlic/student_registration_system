@@ -1,0 +1,5 @@
+<nav class="pagy-nav" aria-label="pagination">
+  <%= link_to_if @pagy.prev, "&lt; Previous".html_safe, pagy_prev_a(@pagy), class: 'page' %>
+  <%#== pagy_nav(@pagy) %>
+  <%= link_to_if @pagy.next, "Next &gt;".html_safe, pagy_next_a(@pagy), class: 'page' %>
+</nav>

@@ -1,0 +1,14 @@
+<%= form_tag process_csv_admin_students_path, multipart: true, class: 'file-upload-form', data: { turbo_frame: '_top' } do %>
+  <label for="import_file" class="file-label button-59">
+    <i class="fa-solid fa-file-csv"></i>
+    Choose a file
+    <span data-import-csv-target="fileName"></span>
+  </label>
+  <%= file_field_tag :import_file, accept: '.csv', id: 'import_file', style: 'display: none;', name: 'import_file' %>
+  <%#= submit_tag class: 'button' do >
+    <i class="fa-solid fa-plus"></i>
+  <% end %>
+  <%= button_tag(type: 'submit', class: 'button-17 button-17--add-csv') do %>
+    <i class="fa-solid fa-plus"></i>
+  <% end %>
+<% end %>

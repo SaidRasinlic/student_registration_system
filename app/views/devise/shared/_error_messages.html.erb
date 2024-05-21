@@ -1,0 +1,14 @@
+<% if resource.errors.any? %>
+  <div id="flash" class="flash">
+    <% resource.errors.full_messages.each do |msg| %>
+      <div class="flash__message"
+       data-controller="removals"
+       data-action="animationend->removals#remove">
+        <div class="alert-box error">
+          <%= msg %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%#<h1 style="color: red; font-size: 34px;">jAJAHASHJAJLA</h1> %>
