@@ -2,7 +2,8 @@
 
 This Ruby on Rails project is aimed at building a web application for managing student registrations. The system allows educational institutions or organizations to efficiently handle the registration process for students, providing a convenient platform for both administrators and students.
 
-> P.S. This project can and should be upgraded, as not all functionality is implemented, but rather it is a great template for future reference created by myself by using Turbo Frame and Turbo Stream technologies. Please note that some of the data is hardcoded.
+> [!IMPORTANT] 
+> This project can and should be upgraded, as not all functionality is implemented, but rather it is a great template for future reference created by myself by using Turbo Frame and Turbo Stream technologies. Please note that some of the data is hardcoded.
 
 ## Screenshots
 <!-- ![Desktop Snapshot](./app/assets/images/Turbo-Dashboard.png) -->
@@ -44,7 +45,7 @@ To set up and run the Student Registration System locally, follow these steps:
 
 4. Setup Database Configuration 
 
-   1. Edit configuration manually
+   - 1. Edit configuration manually
 
       - Open `config/database.yml`.
 
@@ -52,7 +53,7 @@ To set up and run the Student Registration System locally, follow these steps:
 
       - Replace `username` and `password` with your PostgreSQL username and password.
 
-   2. Use Environment Variables with `local_env.yml`
+   - 2. Use Environment Variables with `local_env.yml`
 
       - Create `config/local_env.yml`.
 
