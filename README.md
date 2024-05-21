@@ -2,7 +2,7 @@
 
 This Ruby on Rails project is aimed at building a web application for managing student registrations. The system allows educational institutions or organizations to efficiently handle the registration process for students, providing a convenient platform for both administrators and students.
 
-> P.S. This project can and should be upgraded, as not all functionality is implemented, but rather it is a great template for future reference created by myself by using Turbo Frame and Turbo Stream technologies. Please note that some of data are hardcoded.
+> P.S. This project can and should be upgraded, as not all functionality is implemented, but rather it is a great template for future reference created by myself by using Turbo Frame and Turbo Stream technologies. Please note that some of the data is hardcoded.
 
 ## Screenshots
 <!-- ![Desktop Snapshot](./app/assets/images/Turbo-Dashboard.png) -->
@@ -16,14 +16,10 @@ This Ruby on Rails project is aimed at building a web application for managing s
 ## Built With
 
 - Ruby on Rails
+- Turbo/Hotwire
 - PostgreSQL
-- Bootstrap
 - SCSS, CSS
-- Gems (Gemfile)
-- Linters (Rubocop)
-- VSCode
-- Git Bash
-- GitHub
+- Linters
 
 ## Getting Started
 
@@ -34,14 +30,13 @@ To set up and run the Student Registration System locally, follow these steps:
 - Laptop or Desktop
 - Web Browser
 - Ruby (installed and set up)
-- IDE (preferably Visual Studio Code)
-- Basic Programming Knowledge
+- CE (preferably Visual Studio Code)
 
 ### Installation and Setup
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/said_rasinlic/student-registration-system.git 
+   git clone https://github.com/SaidRasinlic/student-registration-system.git 
    ```
 2. Navigate to the correct directory (case-sensitive)
 
