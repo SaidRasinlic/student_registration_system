@@ -1,0 +1,48 @@
+<%= turbo_frame_tag 'student-new' do %>
+  <%= simple_form_for @user, url: admin_students_path(@user), data: { controller: 'student', action: 'turbo:submit-end->student#redirect2' } do |form| %>
+    <%= form_error_notification(@user) %>
+    <tr>
+      <td data-label="ID">New</td>
+      <td data-label="Avatar">
+        <div class="student-details">
+          <%= form.file_field :avatar, placeholder: "Choose avatar" %>
+        </div>
+      </td>
+      <td data-label="Full name">
+        <div class="student-details">
+          <%= form.text_field :full_name, placeholder: "Student full name" %>
+        </div>
+      </td>
+      <td data-label="Email">
+        <div class="student-details">
+          <%= form.email_field :email, placeholder: "Student e-mail" %>
+        </div>
+      </td>
+      <td data-label="Status">
+        <div class="student-details">
+          <%= form.text_field :status, placeholder: "Student status" %>
+        </div>
+      </td>
+      <td data-label="Verified">
+        <div class="student-details">
+          <%= form.text_field :verified, placeholder: "Student verified" %>
+        </div>
+      </td>
+      <td data-label="DoB">
+        <div class="student-details">
+          <%= form.text_field :dob, placeholder: "Student date of birth" %>
+        </div>
+      </td>
+      <td data-label="Location">
+        <div class="student-details">
+          <%= form.text_field :location, placeholder: "Student location" %>
+        </div>
+      </td>
+      <td data-label="Action">
+        <div class="student-actions">
+          <%= form.button :submit %>
+        </div>
+      </td>
+    </tr>
+  <% end %>
+<% end %>

@@ -1,0 +1,3 @@
+<% Rails.logger.info('CREATE TURBO STREAM CALLED') %>
+<%= turbo_stream.append "users", partial: 'admin/students/student', locals: { student: @user } %>
+<%= turbo_stream.update('flash', partial: 'shared/flash') %>

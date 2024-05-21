@@ -1,0 +1,23 @@
+<!-- app/views/students/_import_csv.html.erb -->
+<%= turbo_frame_tag 'import_csv' do %>
+  <div class="modal-import-csv turbo-modal__inner" data-controller="turbo-modal">
+    <%= button_tag(type: "button", class: "turbo-modal__btn turbo-modal__btn--back", data: { action: "turbo-modal#closeModal" }) do %>
+      <i class="fa-solid fa-arrow-left" data-action="click->turbo-modal#goBack2"></i>
+    <% end %>
+    <%# <div class="turbo-modal__inner" data-turbo-modal-target="inner">%>
+    <h2 class="turbo-modal__header">Choose a file to import:</h2>
+    <div class="turbo-modal__drop-zone drag-drop-zone" data-controller="import-csv">
+      <dotlottie-player src="https://lottie.host/51130c55-bc25-4258-abd0-d100a70a138b/00mekwhHAn.json" class="turbo-modal__anime" background="transparent" speed="1" loop autoplay></dotlottie-player>
+      <div class="turbo-modal__prompt drag-drop-zone__prompt">Drag and drop files here or click to upload</div>
+      <%= render 'admin/students/modals/import_csv_form' %>
+      <%# -------------------------------------------------------------------------- %>
+      <div data-import-csv-target="fileInfo" class="turbo-modal__selected-info" style="display: none;">
+        <%# <span data-import-csv-target="fileName"></span>%>
+        <%= button_tag(type: "button", class: "turbo-modal__btn turbo-modal__btn--remove-file button-17 button-17--add-csv", data: { action: "import-csv#removeFile" }) do %>
+          <i class="fa-solid fa-minus"></i>
+        <% end %>
+      </div>
+    </div>
+    <%#</div>%>
+  </div>
+<% end %>

@@ -1,0 +1,63 @@
+  <% if student.present? %>
+  <tr>
+    <td data-label="ID">#<%= student.id %></td>
+    <td data-label="Avatar">
+      <div class="student-details">
+        <% if student.avatar.present? %>
+          <%= image_tag student.avatar, class: "student-details__avatar", alt: "Student avatar" %>
+          <%#= image_tag rails_blob_path(student.avatar) %>
+        <% else %>
+          <!-- Add a placeholder image or alternative content -->
+          <%= image_tag student.avatar_url, class: "student-details__avatar" %>
+          <%#= image_tag student.avatar %>
+          <%#= image_tag(student.avatar, size:"950x350") %>
+          <%#= student.avatar %>
+        <% end %>
+        <%#= image_tag student.avatar, class: "avatar", alt: "Student Avatar" %>
+      </div>
+    </td>
+    <td data-label="Full name">
+      <div class="student-details">
+        <%= student.full_name %>
+      </div>
+    </td>
+    <td data-label="Email">
+      <div class="student-details">
+        <%= student.email %>
+      </div>
+    </td>
+    <td data-label="Status">
+      <span class="student-status student-status--<%= student.status %>">
+        <span class="student-status__dot student-status__dot--<%= student.status %>"></span>
+        <%= student.status %>
+      </span>
+    </td>
+    <td data-label="Verified">
+      <div class="student-details">
+        <%= student.verified %>
+      </div>
+    </td>
+    <td data-label="DoB">
+      <div class="student-details">
+        <%= student.dob %>
+      </div>
+    </td>
+    <td data-label="Location">
+      <div class="student-details">
+        <%= student.location %>
+      </div>
+    </td>
+    <%# <td data-label="Email">alexvonminden2832@outlook.com</td %>
+    <td data-label="Action">
+      <div class="student-actions">
+        <%= link_to '#', class: 'student-btn student-btn--edit' do %>
+          <i class="fa-solid fa-pen"></i>
+        <% end %>
+        <%= link_to admin_student_path(student), class: 'student-btn student-btn--delete', data: {turbo_method: :delete} do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </div>
+    </td>
+    <%# <td data-label="Action"><button class="btn-invoice">Delete</button></td %>
+  </tr>
+<% end %>
