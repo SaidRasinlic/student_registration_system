@@ -6,7 +6,7 @@ This Ruby on Rails project is aimed at building a web application for managing s
 
 ## Screenshots
 <!-- ![Desktop Snapshot](./app/assets/images/Turbo-Dashboard.png) -->
-<p align="center">
+<p float="left">
   <img src="./app/assets/images/Turbo-Dashboard.png" width="400" />
   <img src="./app/assets/images/Turbo-Create.png" width="400" /> 
   <img src="./app/assets/images/Turbo-Modal.png" width="400" />
