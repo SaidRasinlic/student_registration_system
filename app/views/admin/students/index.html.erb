@@ -1,0 +1,115 @@
+<h2 class="main-content__page-name">Home / Students</h2>
+<div id="students-index" class="student-list"> <%# table-wrapper %>
+  <div class="student-list__inner"> <%# table-wrapper__tab-container %>
+    <h2 class="student-list__title">Student list</h2>
+    <div class="student-list__header student-header">
+      <div class="student-header__search">
+        <%= text_field_tag :query, params[:query], class: "main-content__search-box--bar student-header__input", placeholder: "Search..." %>
+      </div>
+      <%== pagy_nav(@pagy) %>
+      <div class="student-header__buttons" data-controller="turbo-modal">
+        <%= button_to import_export_admin_students_path, class: "btn btn--import", data: { turbo_method: :post, action: "turbo-modal#openModal", turbo_frame: 'modal', turbo_action: 'advance' } do %>
+          <i class="fa-solid fa-file-csv"></i>
+          &nbsp;
+          Import/Export
+        <% end %>
+        <%= link_to new_admin_student_path, class: "btn btn--export", data: { turbo_frame: "student-new" } do %>
+          <%# , data: { controller: "import-csv", action: "import-csv#uploadFiles" } %>
+          <i class="fa-solid fa-plus"></i>
+          &nbsp;
+          Add student
+        <% end %>
+        <%= turbo_frame_tag 'modal' %>
+        <%#= turbo_frame_tag 'import_csv' %>
+      </div>
+      <%#= form_tag import_csv_admin_students_path, multipart: true do >
+        <%= file_field_tag :file, accept: '.csv' >
+        <%= submit_tag 'Import CSV' >
+      <% end %>
+    </div>
+    <%= turbo_frame_tag 'student-new' %>
+    <%#= render 'shared/pagy/pagy_nav', pagy: @pagy %>
+    <%#== pagy_nav(@pagy, next: "Next") %>
+    <table>
+      <%# <colgroup>
+        <col class="one"/>
+        <col class="two"/>
+        <col class="three"/>
+        <col class="four"/>
+      </colgroup> 
+      %>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Avatar</th>
+          <th scope="col">Full name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Status</th>
+          <th scope="col">Verified</th>
+          <th scope="col">DoB</th>
+          <th scope="col">Location</th>
+          <th scope="col"></th>
+          <%# <th></th %>
+        </tr>
+      </thead>
+      <tbody id="students_page_<%= @pagy.page %>">
+        <%#<tr>
+          <td data-label="ID">#4234320</td>
+          <td data-label="Avatar">
+            <div class="student-details">
+              www.avatar.com
+            </div>
+          </td>
+          <td data-label="Full name">
+            <div class="student-details">
+              Said Rasinlic
+            </div>
+          </td>
+          <td data-label="Email">
+            <div class="student-details">
+              saidrasinlic@mail.com
+            </div>
+          </td>
+          <td data-label="Status">
+            <span class="student-status student-status--enrolled">
+              <span class="student-status__dot student-status__dot--enrolled"></span>
+              Enrolled
+            </span>
+          </td>
+          <td data-label="Verified">
+            <div class="student-details">
+              True
+            </div>
+          </td>
+          <td data-label="DoB">
+            <div class="student-details">
+              January 14, 2000
+            </div>
+          </td>
+          <td data-label="Location">
+            <div class="student-details">
+              Bosnia
+            </div>
+          </td>
+        <td data-label="Action">
+          <div class="student-actions">
+            <%= link_to '#', class: 'student-btn student-btn--edit' do >
+              <i class="fa-solid fa-pen"></i>
+            <% end >
+            <%= button_to '#', class: 'student-btn student-btn--delete', method: :delete do >
+              <i class="fa-solid fa-trash"></i>
+            <% end 
+      </div>
+    </td>
+    <%# <td data-label="Action"><button class="btn-invoice">Delete</button></td >
+  </tr>
+            %>
+        <%#= render @students %>
+        <%#= turbo_frame_tag 'student-new' >
+        <tr id="student-new"></tr %>
+        <%#= render partial: 'admin/students/students_list', locals: { pagy: @pagy, students: @students } %>
+        <%= render partial: 'student', collection: @students %>
+      </tbody>
+    </table>
+  </div>
+</div>

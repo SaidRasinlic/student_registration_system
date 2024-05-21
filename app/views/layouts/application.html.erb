@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student-Registration-System</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="icon" href="data:,">
+  </head>
+  <body>
+    <main>
+      <%= render 'shared/spinner' %>
+      <div id="flash" class="flash">
+        <%= render "shared/flash" %>
+      </div>
+      <div class="overlay"></div>
+      <div class="dashboard-container">
+        <div class="left-side">
+          <ul class="left-side__navbar">
+            <li class="<%= 'active' if current_page?(admin_dashboard_path) %>">
+              <%= link_to admin_dashboard_path do %>
+                <i class="fa-solid fa-grip"></i>
+              <% end %>
+            </li>
+            <li class="<%= 'active' if current_page?(admin_students_path) %>">
+              <%= link_to admin_students_path do %>
+                <i class="fa-solid fa-list"></i>
+              <% end %>
+            </li>
+            <%# <li><a href="#"><i class="fa-solid fa-check-double"></i></a></li> <i class="fa-solid fa-envelopes-bulk"></i>%>
+            <%# <li><a href="#"><i class="fa-solid fa-cubes"></i></a></li> %>
+            <li class="<%= 'active' if current_page?(admin_service_center_path) %>">
+              <%= link_to admin_service_center_path do %>
+                <%# <i class="fa-solid fa-users-viewfinder"></i> %>
+                <i class="fa-solid fa-headset"></i>
+              <% end %>
+            </li>
+            <li class="<%= 'active' if current_page?(admin_mails_path) %>">
+              <%= link_to admin_mails_path do %>
+                <i class="fa-solid fa-envelopes-bulk"></i>
+              <% end %>
+            </li>
+            <li class="<%= 'active' if current_page?(admin_settings_path) %>">
+              <%= link_to admin_settings_path do %>
+                <i class="fa-solid fa-gear"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to destroy_user_session_path, data: { turbo_method: :delete } do %>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        <div class="main-content">
+          <div class="main-content__header">
+            <div class="main-content__logo">
+              <span>
+                <img src="../../../TurboDashboard2.png" alt="Waves Media" style="width: 30px; display: inline-block; vertical-align: middle;">
+              </span>
+              <span class="main-content__logo--title">Turbo</span>Dashboard
+              <span>
+                <img src="../../../TurboDashboard2Mirror.png" alt="Waves Media" style="width: 30px; display: inline-block; vertical-align: middle; margin-left: 5px;">
+              </span>
+            </div>
+            <ul class="main-content__list">
+              <li>Analytics</li>
+              <!-- Progress -->
+              <li>News</li>
+              <li>Tasks</li>
+              <li>Jobs</li>
+            </ul>
+            <div class="main-content__search-box">
+              <%= text_field_tag :query, params[:query], class: "main-content__search-box--bar", placeholder: "Search..." %>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="main-content__user-info">
+              <div><i class="fa-solid fa-bell"></i></div>
+              <div><i class="fa-solid fa-envelope"></i></div>
+              <div><i class="fa-solid fa-user"></i></div>
+              <%# <div>18:46 AM</div>%>
+            </div>
+          </div>
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  </body>
+</html>

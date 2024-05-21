@@ -1,0 +1,44 @@
+<div class="form" data-controller="login-register" data-login-register-target="form">
+  <%#= turbo_frame_tag "login-register" do %>
+    <!-- Login From -->
+    <div class="form__login">
+      <%#= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= form_error_notification(resource) %>
+          <h2 class="form__header">Sign in</h2>
+          <div class="form__field">
+            <%= f.label :email, class: "visually-hidden" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, placeholder: "Enter your email" %>
+            <!-- <input type="email" placeholder="Enter your email" required />
+        <i class="uil uil-envelope-alt email"></i> -->
+          </div>
+          <div class="form__field">
+            <!-- <input type="password" placeholder="Enter your password" required /> -->
+            <%= f.label :password, class: "visually-hidden" %>
+            <%= f.password_field :password, autocomplete: "current-password", required: true, placeholder: "Enter your password" %>
+            <%# <i class="uil uil-lock password"></i>
+         <i class="uil uil-eye-slash pw_hide"></i %>
+            <i data-action="click->login-register#toggleVisibility" class="toggle-pw fa-fw fa-regular fa-eye-slash"></i>
+          </div>
+          <div class="form__field checkbox">
+            <span class="checkbox__inner">
+              <!-- <input type="checkbox" id="check" />
+          <label for="check">Remember me</label> -->
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </span>
+            <a href="#" class="forgot_pw">Forgot password?</a>
+          </div>
+          <button class="form__button">Sign in</button>
+          <div class="form__login-register">Don't have an account? 
+            <%#a href="#" id="signup">Signup</%a %>
+            <%#= link_to 'Sign up', '#', data: { action: "login-register#toggle"} %>
+            <%= link_to 'Sign up', new_registration_path(resource_name), data: { action: "login-register#toggle"} %>
+          </div>
+        <% end %>
+      </div>
+      <%#= render "devise/registrations/new" %>
+      <%= turbo_frame_tag 'registry', target: '_top' do %>
+        <%= render "devise/registrations/new" %>
+      <% end %>
+    </div>

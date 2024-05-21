@@ -1,0 +1,200 @@
+<h2 class="main-content__page-name">Home / Dashboard</h2>
+<div class="main-content__inner">
+  <div class="main-content__mid">
+    <div class="main-content__first-box">
+      <div class="main-content__one">
+        <div class="main-content__inner-one"> <%# total registered students%>
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">Total registered students</h3>
+              <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <p class="main-content__data-profile">
+              <%= @dashboard_data.total_registered_students %>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content__two">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">Today registered students</h3>
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <p>
+              <%= @dashboard_data.today_registered_students %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content__three">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Total unpaid student bills
+              </h3>
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <p>
+              24298
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content__four">
+        <%# Students monthly paid fees %>
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Total paid student bills
+              </h3>
+              <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            </div>
+            <p>
+              24298
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content__five">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Male vs female
+              </h3>
+              <i class="fa-solid fa-venus-mars"></i>
+            </div>
+            <p>
+              3422/2464
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%# second starts from this%>
+    <div class="main-content__second-box">
+      <div  class="main-content__one">
+        Analytics last year students vs this (enrollment)
+      </div>
+      <div  class="main-content__two">
+        Analytics last year students vs this (money)
+      </div>
+    </div>
+    <%# second ends from this%>
+    <div class="main-content__third-box">
+      <div  class="main-content__one">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Overall course completion
+              </h3>
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+            <p>
+              Donald
+            </p>
+          </div>
+        </div>
+      </div>
+      <div  class="main-content__two">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Overall course dropout
+              </h3>
+              <i class="fa-solid fa-arrow-trend-down"></i>
+            </div>
+            <p>
+              John
+            </p>
+          </div>
+        </div>
+      </div>
+      <div  class="main-content__three">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Top 5 student countries
+              </h3>
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <p>
+              Kenya, Bosnia, Romania
+            </p>
+          </div>
+        </div>
+      </div>
+      <div  class="main-content__four">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Jobs requests
+              </h3>
+              <i class="fa-brands fa-searchengin"></i>
+            </div>
+            <p>
+              77
+            </p>
+          </div>
+        </div>
+      </div>
+      <div  class="main-content__five">
+        <div class="main-content__inner-one">
+          <div class="main-content__data">
+            <div class="main-content__data-header">
+              <h3 class="main-content__data-header--title">
+                Feedbacks
+              </h3>
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <p>
+              34
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-content__right">
+    <div class="main-content__first-box">
+      <div class="main-content__inner-one">
+        <div class="main-content__data">
+          <div class="main-content__data-header">
+            <h3 class="main-content__data-header--title">
+              Top performing students
+            </h3>
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <p>Data 1</p>
+        </div>
+      </div>
+    </div>
+    <div class="main-content__second-box">
+      <div class="main-content__inner-one">
+        <div class="main-content__data">
+          <div class="main-content__data-header">
+            <h3 class="main-content__data-header--title">
+              Low performing students
+            </h3>
+            <i class="fa-solid fa-circle-exclamation"></i>
+          </div>
+          <p>Data 2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

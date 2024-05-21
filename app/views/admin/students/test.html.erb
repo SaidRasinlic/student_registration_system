@@ -1,0 +1,9 @@
+<%# TEST TEST TEST %>
+<h1 style="color: red">TETSTSTSTSTETSTST</h1>
+<%= turbo_frame_tag 'modal-trigger' do %>
+  <div class="modal">
+    <p>Choose an option:</p>
+    <%= button_to "Import", dashboard_import_path, class: "button", data: { turbo_frame: 'import-modal' } %>
+    <%= button_to "Export", dashboard_export_path, class: "button", data: { turbo_frame: 'export-modal' } %>
+  </div>
+<% end %>

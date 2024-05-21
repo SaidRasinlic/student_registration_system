@@ -1,0 +1,556 @@
+.student-list {
+  &__inner {
+    // display: flex;
+    // background: red;
+    // margin: 25px;
+    // padding: 25px 15px;
+    // background: linear-gradient(45deg, black, #1c7882);
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    color: black;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .student-header {
+    &__search {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input[type='text'] {
+        background-color: #eeee;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+
+      .btn--export {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  table {
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    // border: 1px solid #ccc;
+    width: 100%;
+    // margin: 0 25px 25px 25px;
+    padding: 0;
+
+    // col.one {
+    //   width: 10%;
+    // }
+    // col.two {
+    //   width: 50%;
+    // }
+
+    tr {
+      // background-color: #fff;
+      // border: 1px solid #e1e5e9;
+      // border-bottom: 1px solid green;
+      // border-radius: 3px;
+
+      th:nth-child(1) {
+        // width: 15%;
+        text-align: left;
+
+        @media screen and (min-width: 601px) and (max-width: 778px) {
+          width: 18%;
+        }
+      }
+
+      th:nth-child(2) {
+        // width: 25%;
+        // text-align: left;
+      }
+
+      // th:nth-child(7) {
+      //   // width: 15%;
+      // }
+    }
+
+    tr.tr-form {
+      // background-color: red;
+
+      td {
+        overflow: unset !important;
+        text-overflow: unset !important;
+
+        // &:hover {
+        //   text-overflow: unset;
+        //   overflow: unset;
+        //   word-break: break-all;
+        // }
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    // tr:not(:first-child) {
+    //   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    // }
+
+    tbody tr {
+      box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    }
+
+    thead tr:first-child {
+      border-bottom: 1px solid #000;
+    }
+
+    th {
+      border-bottom: 1px solid #d7d7d7;
+    }
+
+    td {
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:hover {
+        text-overflow: unset;
+        overflow: unset;
+        word-break: break-all;
+      }
+    }
+
+    th,
+    td {
+      // padding: 25px;
+      // text-align: center;
+      text-align: center;
+      // color: #9da9b9;
+      color: #000000a9;
+      font-size: 14px;
+      // font-family: cursive;
+    }
+
+    tbody tr td:first-child {
+      text-align: left;
+
+      @media screen and (max-width: 600px) {
+        text-align: right;
+      }
+    }
+
+    tbody tr td:nth-child(2) {
+      text-align: left;
+    }
+
+    @media screen and (max-width: 800px) {
+      tbody tr td:nth-child(4),
+      tbody tr td:nth-child(5) {
+        // text-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+          // text-wrap: unset;
+          overflow: unset;
+          text-overflow: unset;
+        }
+      }
+    }
+
+    th {
+      padding: 15px;
+      letter-spacing: 1.6px;
+      // text-transform: uppercase;
+      // color: #000;
+      color: #fff;
+      color: black;
+
+      @media screen and (max-width: 1000px) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      // background: #0f82e6;
+      // color: #FFF;
+    }
+
+    td {
+      padding: 25px 15px;
+
+      @media screen and (max-width: 600px) {
+        .btn-invoice:first-child {
+          margin-left: auto;
+          margin-right: 5px;
+        }
+      }
+
+      &:nth-child(2) {
+        @media screen and (max-width: 600px) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        @media screen and (max-width: 868px) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &:nth-child(4) {
+        @media screen and (max-width: 600px) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .student-status {
+        display: block;
+        border-radius: 30px;
+        padding: 5px 8px;
+        // background-color: red;
+        width: 100px;
+        min-width: 0;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+
+        &:hover {
+          // overflow: unset;
+          white-space: unset;
+          text-overflow: unset;
+          word-break: break-all;
+        }
+
+        // display: inline-flex;
+        // gap: 5px;
+        // justify-content: space-evenly;
+        // align-items: center;
+        // text-wrap: nowrap;
+        // border-radius: 30px;
+        // padding: 5px 8px;
+        // background-color: red;
+
+        // min-width: 100px;
+
+        // width: 100px;
+        // min-width: 56px;
+        // max-width: 100%;
+
+        &__dot {
+          display: inline-block;
+          width: 8px;
+
+          /* Adjust the size of the dot as needed */
+          height: 8px;
+          background-color: pink;
+
+          /* Set the color you want for the dot */
+          border-radius: 50%;
+          // margin-right: 4px;
+
+          /* Adjust the spacing between the dot and the text */
+
+          &--graduated {
+            background: green;
+          }
+
+          &--enrolled {
+            background: blue;
+          }
+
+          &--withdrawn {
+            background: gray;
+          }
+
+          &--suspended {
+            // background: orange;
+            background: #ff00005c;
+          }
+
+          &--dropped {
+            // background: #ff00005c;
+            background: #7e0909;
+          }
+        }
+
+        &--graduated {
+          color: green;
+          background: #0080005c;
+        }
+
+        &--enrolled {
+          color: blue;
+          background: #0000ff5c;
+        }
+
+        &--withdrawn {
+          color: gray;
+          background: #d3d3d35c;
+        }
+
+        &--suspended {
+          // color: orange;
+          // background: #ffa5005c;
+          color: darkred;
+          background: #ff00005c;
+        }
+
+        &--dropped {
+          // color: darkred;
+          // background: #ff00005c;
+          color: #7e0909;
+          background: red;
+        }
+
+        // display: revert;
+        // overflow: unset;
+        // // width: auto;
+        // text-align: center;
+        // background-color: green;
+
+        @media screen and (min-width: 320px) and (max-width: 355px) {
+          // display: unset;
+          width: 50px;
+          overflow: hidden;
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 868px) {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .student-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        @media screen and (min-width: 601px) and (max-width: 668px) {
+          gap: 5px;
+        }
+
+        @media screen and (min-width: 669px) and (max-width: 778px) {
+          gap: 10px;
+        }
+
+        @media screen and (min-width: 779px) and (max-width: 948px) {
+          gap: 15px;
+        }
+
+        // @media screen and (max-width: 600px) {
+        //   gap: 10px;
+        // }
+      }
+    }
+
+    // tr td .btn-invoice {
+    //   background: #0f82e6;
+    //   color: #FFF;
+    //   font-size: 13px;
+    //   padding: 10px 20px;
+    //   border: 0;
+    //   // font-family: cursive;
+    // }
+
+    // tbody tr:nth-child(even) {
+    //   background-color: #eee;
+    // }
+
+    // tbody tr:nth-child(odd) {
+    //   // background-color: #fff;
+    // }
+
+    .student-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      @media screen and (max-width: 379px) {
+        justify-content: space-around;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      @media screen and (min-width: 379px) and (max-width: 600px) {
+        justify-content: flex-end;
+      }
+
+      @media screen and (max-width: 1048px) {
+        flex-wrap: wrap;
+      }
+
+      &__avatar {
+        padding: 2px;
+        border-radius: 50%;
+        border: 1px solid goldenrod;
+        width: 64px;
+        height: 64px;
+      }
+
+      &__info {
+        p {
+          margin: 0;
+        }
+
+        p:first-of-type {
+          // font-size: 17px;
+          // font-weight: 600;
+          // margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 748px) {
+          overflow: hidden;
+          text-wrap: nowrap;
+
+          p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+
+      thead {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        border: none;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        width: 1px;
+        padding: 0;
+      }
+
+      tr {
+        border-bottom: 3px solid #e1e5e9;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      td,
+      th {
+        padding: 10px;
+      }
+
+      td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #e1e5e9;
+        font-size: 13px;
+        color: #9da9b9;
+
+        &::before {
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #656971;
+        }
+
+        &:last-child {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 0;
+        }
+
+        &:nth-child(3) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          // background: red;
+          // font-size: 13px;
+          // background-color: red;
+        }
+
+        .student-actions {
+          gap: 10px;
+        }
+
+        .student-status {
+          //   display: revert;
+          //   overflow: unset;
+          //   // width: auto;
+          text-align: center;
+          //   // background-color: green;
+        }
+      }
+
+      .student-details {
+        &__info {
+          p {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .pagy.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .pagy.nav a {
+    display: block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #6200ee;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    transition: background-color 0.7s, color 0.7s;
+  }
+
+  .pagy.nav a:hover {
+    background-color: #6200ee;
+    color: white;
+  }
+
+  .pagy.nav a.disabled {
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #dee2e6;
+  }
+
+  .pagy.nav a.current {
+    background-color: #6200ee;
+    color: white;
+    border-color: #6200ee;
+  }
+
+  .pagy.nav a[aria-disabled="true"] {
+    pointer-events: none;
+  }
+
+  .pagy.nav a[aria-disabled="true"].disabled {
+    background-color: #e9ecef;
+  }
+}

@@ -1,0 +1,64 @@
+<h2 class="main-content__page-name">Home / Students / Create</h2>
+<div class="student-new"> <%# table-wrapper %>
+  <div class="student-new__inner"> <%# table-wrapper__tab-container %>
+    <h2 class="student-new__title">Create student</h2>
+    <%= turbo_frame_tag 'student-new' do %>
+      <tr>
+        <%= simple_form_for @user, url: admin_students_path, data: { controller: 'student', action: 'turbo:submit-end->student#redirect' } do |f| %>
+          <%= form_error_notification(@user) %>
+          <td data-label="ID">
+          </td>
+          <td data-label="Avatar">
+            <div class="student-details__info">
+              <%= f.label :avatar %>
+              <%= f.file_field :avatar, placeholder: "Choose avatar" %>
+            </div>
+          </td>
+          <td data-label="Full name">
+            <div class="student-details__info">
+              <%= f.label :full_name %>
+              <%= f.text_field :full_name, autofocus: true, placeholder: "Student full name" %>
+            </div>
+          </td>
+          <td data-label="Email">
+            <div class="student-details__info">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, placeholder: "Student e-mail" %>
+            </div>
+          </td>
+          <td data-label="Status">
+            <div class="student-details__info">
+              <%= f.label :status %>
+              <%= f.text_field :status, autofocus: true, placeholder: "Student status" %>
+            </div>
+          </td>
+          <td data-label="Verified">
+            <div class="student-details__info">
+              <%= f.label :verified %>
+              <%= f.text_field :verified, autofocus: true, placeholder: "Student verified" %>
+            </div>
+          </td>
+          <td data-label="DoB">
+            <div class="student-details__info">
+              <%= f.label :dob %>
+              <%= f.text_field :dob, placeholder: "Student date of birth" %>
+            </div>
+          </td>
+          <td data-label="Location">
+            <div class="student-details__info">
+              <%= f.label :location %>
+              <%= f.text_field :location, placeholder: "Student location" %>
+            </div>
+          </td>
+          <td>
+            <div class="student-actions">
+              <%= link_to  admin_students_path do %>
+                <i class="fa-solid fa-xmark"></i>
+              <%end%>
+            </div>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </div>
+</div>

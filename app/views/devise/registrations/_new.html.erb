@@ -1,0 +1,44 @@
+<%#= render "devise/shared/error_messages" %>
+<%#= turbo_frame_tag "lol" do %>
+  <div class="form__register">
+    <h2 class="form__header">Sign up1242</h2>
+    <%#= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {controller: "form"}) do |f| %>
+        <%#= render "devise/shared/error_messages", resource: resource %>
+        <%# resource.errors.full_messages.each do |msg| >
+    <div><%= msg ></div>
+  <% end %>
+        <div class="form__field" data-login-register-target="field">
+          <%#= 'field_with_errors' if f.object.errors[:full_name].any? %>
+          <%= f.label :full_name, class: "visually-hidden" %>
+          <%#= f.text_field :full_name, autofocus: true, required: true, autocomplete: "name", placeholder: "Enter your full name"%>
+          <%= f.text_field :full_name, autofocus: true, required: true, autocomplete: "name", placeholder: "Enter your full name", class: ('error' if f.object.errors[:full_name].any?) %>
+        </div>
+        <div class="form__field">
+          <%= f.label :email, class: "visually-hidden" %>
+          <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", placeholder: "Enter your email", class: ('error' if f.object.errors[:full_name].any?) %>
+        </div>
+        <div class="form__field">
+          <%= f.label :password, class: "visually-hidden" %>
+          <% if @minimum_password_length %>
+            <em style="position: absolute; top: -15px;">(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+          <%= f.password_field :password, required: true, autocomplete: "new-password", placeholder: "Enter your password", class: ('error' if f.object.errors[:full_name].any?) %>
+          <i data-action="click->login-register#toggleVisibility" class="toggle-pw fa-fw fa-regular fa-eye-slash"></i>
+        </div>
+        <div class="form__field">
+          <%= f.label :password_confirmation, class: "visually-hidden" %>
+          <%= f.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: "Confirm your password", class: ('error' if f.object.errors[:full_name].any?) %>
+          <i data-action="click->login-register#toggleVisibility" class="toggle-pw fa-fw fa-regular fa-eye-slash"></i>
+        </div>
+        <%#= f.submit "Sign up" %>
+        <button class="form__button">Sign up</button>
+        <div class="form__login-register">
+          Already have an account?
+          <%#= link_to "Sign in", '#', data: { action: "login-register#toggle" } data-action="click->login-register#handleMe" %>
+          <%= link_to "Sign in", new_session_path(resource_name), data: { action: "login-register#toggle" } %>
+        </div>
+      <% end %>
+      <%#= render "devise/shared/links" %>
+    </div>
+    <%# end %>

@@ -1,0 +1,50 @@
+<% flash.each do |type, msg| %>
+  <div class="flash__message"
+  data-controller="removals"
+  data-action="animationend->removals#remove">
+    <% if type == "success" %>
+      <div class="alert-box success">
+        <%= msg %>
+      </div>
+    <% elsif type == "notice" %>
+      <div class="alert-box notice">
+        <%= msg %>
+      </div>
+    <% else %>
+      <div class="alert-box error">
+        <%= msg %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<% if resource.errors.any? %>
+  <% # Define the order of fields in your form -->
+  error_order = ['full_name', 'email', 'password'] # Adjust this array according to your form field order
+  %>
+  <% error_order.each do |field| %>
+    <% if resource.errors.full_messages_for(field).any? %>
+      <% resource.errors.full_messages_for(field).each do |msg| %>
+        <div class="flash__message"
+             data-controller="removals"
+             data-action="animationend->removals#remove">
+          <div class="alert-box error">
+            <%= msg %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+<!--<% if resource.errors.any? %>
+  <% resource.errors.full_messages.each do |msg| %>
+    <div class="flash__message"
+       data-controller="removals"
+       data-action="animationend->removals#remove">
+      <div class="alert-box error">
+        <%= msg %>
+        <%#= resource.full_error_messages %>
+        <%#= resource.errors.full_messages.join(", ") if resource.errors.any? %>
+      </div>
+    </div>
+  <% end %>
+<% end %>-->

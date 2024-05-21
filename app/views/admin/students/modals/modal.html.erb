@@ -1,0 +1,30 @@
+<%= turbo_frame_tag "modal" do %>
+  <div class="turbo-modal" data-turbo-modal-target="modal" data-controller="turbo-modal">
+    <%= button_tag(type: "button", class: "turbo-modal__btn turbo-modal__btn--close", data: { action: "turbo-modal#closeModal" }) do %>
+      <i class="fa-solid fa-xmark"></i>
+    <% end %>
+    <%#= turbo_frame_tag "import_csv" %>
+    <%= turbo_frame_tag "import_export" do %>
+      <div class="turbo-modal__inner" data-turbo-modal-target="inner">
+        <h2 class="turbo-modal__header">Choose an option:</h2>
+        <dotlottie-player src="https://lottie.host/e320ea38-64c9-4da8-b921-b606804683d0/Bd6u2JxyTq.json" class="turbo-modal__anime" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        <div class="turbo-modal__btn-wrapper">
+          <%= button_to import_csv_admin_students_path, class: "turbo-modal_btn turbo-modal_btn--import-btn button-17", data: { action: "turbo-modal#changeImport", turbo_frame: "import_csv" } do %>
+            <i class="fa-solid fa-upload"></i>
+            &nbsp;
+            Import
+          <% end %>
+          <%= button_to export_csv_admin_students_path, class: "turbo-modal_btn turbo-modal_btn--export-btn button-17", data: { action: "turbo-modal#changeExport", turbo_frame: "_top" } do %>
+            <i class="fa-solid fa-download"></i>
+            &nbsp;
+            Export
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%#= button_to "#", class: "button", data: { action: "turbo-modal#closeModal" } do >
+        <i class="fa-solid fa-xmark"></i>
+      <% end %>
+<%#= button_to "Close", "#", class: "button", data: { action: "turbo-modal#hideModal" } %>
