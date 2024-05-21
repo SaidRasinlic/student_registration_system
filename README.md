@@ -36,7 +36,7 @@ To set up and run the Student Registration System locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SaidRasinlic/student_registration_system.git 
+   git clone https://github.com/SaidRasinlic/student_registration_system
    ```
 2. Navigate to the correct directory (case-sensitive)
 
