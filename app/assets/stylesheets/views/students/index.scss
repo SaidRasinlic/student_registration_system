@@ -40,7 +40,6 @@
     }
   }
 
-
   table {
     table-layout: fixed;
     border-collapse: separate;
@@ -88,14 +87,14 @@
       td {
         overflow: unset !important;
         text-overflow: unset !important;
-  
+
         // &:hover {
         //   text-overflow: unset;
         //   overflow: unset;
         //   word-break: break-all;
         // }
       }
-      
+
       input {
         width: 100%;
       }
@@ -106,7 +105,7 @@
     // }
 
     tbody tr {
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     }
 
     thead tr:first-child {
@@ -152,7 +151,6 @@
     }
 
     @media screen and (max-width: 800px) {
-
       tbody tr td:nth-child(4),
       tbody tr td:nth-child(5) {
         // text-wrap: nowrap;
@@ -195,7 +193,6 @@
       }
 
       &:nth-child(2) {
-
         @media screen and (max-width: 600px) {
           display: flex;
           justify-content: space-between;
@@ -227,7 +224,6 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-
         text-transform: uppercase;
         font-size: 12px;
         font-weight: bold;
@@ -248,7 +244,6 @@
         // padding: 5px 8px;
         // background-color: red;
 
-
         // min-width: 100px;
 
         // width: 100px;
@@ -258,12 +253,15 @@
         &__dot {
           display: inline-block;
           width: 8px;
+
           /* Adjust the size of the dot as needed */
           height: 8px;
           background-color: pink;
+
           /* Set the color you want for the dot */
           border-radius: 50%;
           // margin-right: 4px;
+
           /* Adjust the spacing between the dot and the text */
 
           &--graduated {
@@ -287,7 +285,6 @@
             // background: #ff00005c;
             background: #7e0909;
           }
-
         }
 
         &--graduated {
@@ -331,7 +328,7 @@
           overflow: hidden;
         }
 
-        @media screen and (min-width: 601px) and (max-width:868px) {
+        @media screen and (min-width: 601px) and (max-width: 868px) {
           display: block;
           overflow: hidden;
           text-overflow: ellipsis;

@@ -47,7 +47,8 @@ class CustomDevise::RegistrationsController < Devise::RegistrationsController
             turbo_stream.update('flash', partial: 'shared/flash')
           ]
           # format.html
-          # render turbo_stream: turbo_stream.update('registry', partial: 'devise/registrations/new', locals: { resource: resource})
+          # render turbo_stream: turbo_stream.update('registry', partial: 'devise/registrations/new',
+          #  locals: { resource: resource})
         end
       end
     end
@@ -74,11 +75,13 @@ class CustomDevise::RegistrationsController < Devise::RegistrationsController
   #     respond_to do |format|
   #       format.html { render :new }
   #       # render turbo_stream: [
-  #       #   turbo_stream.replace('registry', partial: 'devise/registrations/new', locals: { resource: resource, flashes: flash.to_hash }),
+  #       #   turbo_stream.replace('registry', partial: 'devise/registrations/new',
+  #  locals: { resource: resource, flashes: flash.to_hash }),
   #       #   turbo_stream.replace('flash-message', partial: 'shared/flash')
   #       # ]
   #       # format.turbo_stream do
-  #       #   render turbo_stream: turbo_stream.replace('registry', partial: 'devise/registrations/new', locals: { resource: resource, flashes: flash.to_hash })
+  #       #   render turbo_stream: turbo_stream.replace('registry', partial: 'devise/registrations/new',
+  # locals: { resource: resource, flashes: flash.to_hash })
   #       #   render turbo_stream: turbo_stream.replace('flash-message', partial: 'shared/flash')
   #       # end
   #     end

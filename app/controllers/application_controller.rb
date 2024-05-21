@@ -50,5 +50,10 @@ class ApplicationController < ActionController::Base
   end
 end
 
-# //https://codepen.io/monzork/pen/MWWbamg https://codepen.io/Kaylled/pen/RwyJrMJ https://codepen.io/nobin-light/pen/eYrpJLN https://codepen.io/prakharv10/pen/KKWRyOo https://codepen.io/infinity123/pen/BaQpoLJ https://codepen.io/runtimess/pen/oNvWGxz https://codepen.io/mweslander/pen/xMLjXL https://codepen.io/samcorin/pen/gKvOwZ https://codepen.io/Geshben/pen/XWpzqVW https://codepen.io/gzwo/pen/VwemMYM
-# { https://codepen.io/EduardL/pen/jObzJB }
+# # //https://codepen.io/monzork/pen/MWWbamg
+# # https://codepen.io/Kaylled/pen/RwyJrMJ https://codepen.io/nobin-light/pen/eYrpJLN
+# # https://codepen.io/prakharv10/pen/KKWRyOo https://codepen.io/infinity123/pen/BaQpoLJ
+# # https://codepen.io/runtimess/pen/oNvWGxz https://codepen.io/mweslander/pen/xMLjXL
+# # https://codepen.io/samcorin/pen/gKvOwZ https://codepen.io/Geshben/pen/XWpzqVW
+# # https :/ / codepen.io / gzwo / pen / VwemMYM
+# # { https://codepen.io/EduardL/pen/jObzJB }

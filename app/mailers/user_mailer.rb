@@ -6,9 +6,8 @@ class UserMailer < ApplicationMailer
 
     attachments['students.csv'] = File.read(file_path) if File.exist?(file_path)
 
-    mail(to: 'd0nd0nkeyx@gmail.com', subject: 'Students CSV export is ready for download.', body: 'Email body') do | format |
-      format.html
-    end
+    mail(to: 'd0nd0nkeyx@gmail.com', subject: 'Students CSV export is ready for download.',
+         body: 'Email body', &:html)
 
     # Add logging statements
 

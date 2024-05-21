@@ -53,7 +53,6 @@
     pointer-events: none;
   }
 
-
   &__header {
     display: inline-block;
     text-align: center;
@@ -93,7 +92,6 @@
         font-size: 29px;
       }
     }
-
   }
 
   &__drop-zone {
@@ -108,7 +106,7 @@
       // background: red;
     }
   }
-  
+
   .drag-over {
     background-color: #f0f8ff; /* Light blue background when dragging over the drop zone */
   }
@@ -117,7 +115,6 @@
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
-
   }
 
   &__selected-info {

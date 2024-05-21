@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   # Redirect all unexisting routes
   # match '*path', to: 'application#redirect_to_root', via: :all
 
-#   match '*path', via: :all, to: 'application#redirect_to_root', constraints: lambda { |req|
-#     req.path.exclude? 'rails/active_storage'
-# }
+  match '*path', via: :all, to: 'application#redirect_to_root', constraints: lambda { |req|
+    req.path.exclude? 'rails/active_storage'
+}
 end

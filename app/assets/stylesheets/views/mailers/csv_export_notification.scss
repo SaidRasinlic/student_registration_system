@@ -1,18 +1,17 @@
 @media all {
   .btn-primary table td:hover {
-    background-color: #FF9000 !important;
+    background-color: #ff9000 !important;
     color: #000;
   }
 
   .btn-primary a:hover {
-    background-color: #FF9000 !important;
-    border-color: #FF9000 !important;
+    background-color: #ff9000 !important;
+    border-color: #ff9000 !important;
     color: #000;
   }
 }
 
 @media only screen and (max-width: 640px) {
-
   .main p,
   .main td,
   .main span {

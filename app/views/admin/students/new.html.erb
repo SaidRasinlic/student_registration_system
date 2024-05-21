@@ -1,5 +1,5 @@
 <%= turbo_frame_tag 'student-new' do %>
-  <%= simple_form_for @user, url: admin_students_path(@user), data: { controller: 'student', action: 'turbo:submit-end->student#redirect2' } do |form| %>
+  <%= simple_form_for @user, url: admin_students_path(@user), data: { controller: 'student', action: 'turbo:submit-end->student#redirect' } do |form| %>
     <%= form_error_notification(@user) %>
     <tr>
       <td data-label="ID">New</td>
